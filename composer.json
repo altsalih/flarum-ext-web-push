@@ -10,7 +10,7 @@
     "require": {
         "flarum/core": "^1.7",
         "norkunas/onesignal-php-api": "v2.11.0",
-        "php-http/guzzle6-adapter": "^2.0.2"
+        "guzzlehttp/guzzle": "^7.4"
     },
     "support": {
         "source": "https://github.com/altsalih/flarum-ext-web-push",
