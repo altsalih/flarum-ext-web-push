@@ -1,6 +1,6 @@
 <?php
 
-namespace NikoVonLas\WebPush;
+namespace MaoSal\WebPush;
 
 use Flarum\Extend;
 use Flarum\Frontend\Document;

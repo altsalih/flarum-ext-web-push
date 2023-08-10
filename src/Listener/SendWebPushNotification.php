@@ -1,5 +1,5 @@
 <?php
-namespace NikoVonLas\WebPush\Listener;
+namespace MaoSal\WebPush\Listener;
 
 use Flarum\Notification\Event\Sending;
 use Flarum\Settings\SettingsRepositoryInterface;
@@ -92,12 +92,12 @@ class SendWebPushNotification
 					'{from}' =>  $senderUser->getDisplayNameAttribute()
 				];
 				$link = $url->route('discussion', ['id' => $subject->discussion_id, 'near' => $subject->number]);
-				$heading = $translator->trans('nikovonlas-webpush.notify.like.title', $headingAttrs);
-				$message = $translator->trans('nikovonlas-webpush.notify.like.message', $attrs);
+				$heading = $translator->trans('maosal-webpush.notify.like.title', $headingAttrs);
+				$message = $translator->trans('maosal-webpush.notify.like.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.like.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.like.message', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.like.title');
+					$message_en = $translator->trans('maosal-webpush.notify.like.message', $attrs);
 				}
 				break;
 			case 'postMentioned':
@@ -110,12 +110,12 @@ class SendWebPushNotification
 					'{title}' => $this->excerpt($subject->title)
 				];
 				$link = $url->route('discussion', ['id' => $subject->discussion_id, 'near' => $subject->number]);
-			  $heading = $translator->trans('nikovonlas-webpush.notify.mention-post.title', $headingAttrs);
-				$message = $translator->trans('nikovonlas-webpush.notify.mention-post.message', $attrs);
+			  $heading = $translator->trans('maosal-webpush.notify.mention-post.title', $headingAttrs);
+				$message = $translator->trans('maosal-webpush.notify.mention-post.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.mention-post.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.mention-post.title', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.mention-post.title');
+					$message_en = $translator->trans('maosal-webpush.notify.mention-post.title', $attrs);
 				}
 				break;
 			case 'userMentioned':
@@ -128,12 +128,12 @@ class SendWebPushNotification
 					'{title}' => $this->excerpt($subject->title)
 				];
 				$link = $url->route('discussion', ['id' => $subject->discussion_id, 'near' => $subject->number]);
-			  $heading = $translator->trans('nikovonlas-webpush.notify.mention.title', $headingAttrs);
-				$message = $translator->trans('nikovonlas-webpush.notify.mention.message', $attrs);
+			  $heading = $translator->trans('maosal-webpush.notify.mention.title', $headingAttrs);
+				$message = $translator->trans('maosal-webpush.notify.mention.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.mention.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.mention.message', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.mention.title');
+					$message_en = $translator->trans('maosal-webpush.notify.mention.message', $attrs);
 				}
 				break;
 			case 'newPost':
@@ -145,12 +145,12 @@ class SendWebPushNotification
 					'{title}' => $this->excerpt($subject->title)
 				];
 				$link = $url->route('discussion', ['id' => $subject->id, 'near' => $subject->number]);
-				$heading = $translator->trans('nikovonlas-webpush.notify.post.title', $headingAttrs);
-				$message = $translator->trans('nikovonlas-webpush.notify.post.message', $attrs);
+				$heading = $translator->trans('maosal-webpush.notify.post.title', $headingAttrs);
+				$message = $translator->trans('maosal-webpush.notify.post.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.post.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.post.message', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.post.title');
+					$message_en = $translator->trans('maosal-webpush.notify.post.message', $attrs);
 				}
 				break;
 			case 'discussionRenamed':
@@ -162,12 +162,12 @@ class SendWebPushNotification
 				    '{title}' => $this->excerpt($subject->title)
 				];
 				$link = $url->route('discussion', ['id' => $subject->discussion_id]);
-				$heading = $translator->trans('nikovonlas-webpush.notify.rename.title', $headingAttrs);
-				$message = $translator->trans('nikovonlas-webpush.notify.rename.message', $attrs);
+				$heading = $translator->trans('maosal-webpush.notify.rename.title', $headingAttrs);
+				$message = $translator->trans('maosal-webpush.notify.rename.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.rename.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.rename.message', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.rename.title');
+					$message_en = $translator->trans('maosal-webpush.notify.rename.message', $attrs);
 				}
 				break;
 			case 'discussionLocked':
@@ -179,12 +179,12 @@ class SendWebPushNotification
 				    '{from}' =>  $senderUser->getDisplayNameAttribute()
 				];
 				$link = $url->route('discussion', ['id' => $subject->discussion_id]);
-				$heading = $translator->trans('nikovonlas-webpush.notify.lock.title', $headingAttrs);
-				$message = $translator->trans('nikovonlas-webpush.notify.lock.message', $attrs);
+				$heading = $translator->trans('maosal-webpush.notify.lock.title', $headingAttrs);
+				$message = $translator->trans('maosal-webpush.notify.lock.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.lock.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.lock.message', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.lock.title');
+					$message_en = $translator->trans('maosal-webpush.notify.lock.message', $attrs);
 				}
 				break;
 			case 'discussionDeleted':
@@ -197,12 +197,12 @@ class SendWebPushNotification
 			            '{from}' =>  $senderUser->getDisplayNameAttribute()
 				];
 				$link = $url->route('discussion', ['id' => $subject->discussion_id]);
-				$heading = $translator->trans('nikovonlas-webpush.notify.delete.title', $headingAttrs);
-				$message = $translator->trans('nikovonlas-webpush.notify.delete.message', $attrs);
+				$heading = $translator->trans('maosal-webpush.notify.delete.title', $headingAttrs);
+				$message = $translator->trans('maosal-webpush.notify.delete.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.delete.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.delete.message', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.delete.title');
+					$message_en = $translator->trans('maosal-webpush.notify.delete.message', $attrs);
 				}
 				break;
 			case 'userSuspended':
@@ -210,12 +210,12 @@ class SendWebPushNotification
 					'{from}' => $senderUser->getDisplayNameAttribute()
 				];
 				$link = $url->route('user', ['id' =>  $subject->username]);
-				$heading = $translator->trans('nikovonlas-webpush.notify.suspend.title');
-				$message = $translator->trans('nikovonlas-webpush.notify.suspend.message', $attrs);
+				$heading = $translator->trans('maosal-webpush.notify.suspend.title');
+				$message = $translator->trans('maosal-webpush.notify.suspend.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.suspend.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.suspend.message', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.suspend.title');
+					$message_en = $translator->trans('maosal-webpush.notify.suspend.message', $attrs);
 				}
 				break;
 			case 'userUnsuspended':
@@ -223,12 +223,12 @@ class SendWebPushNotification
 					'{from}' => $senderUser->getDisplayNameAttribute()
 				];
 				$link = $url->route('user', ['id' =>  $subject->username]);
-				$heading = $translator->trans('nikovonlas-webpush.notify.unsuspend.title');
-				$message = $translator->trans('nikovonlas-webpush.notify.unsuspend.message', $attrs);
+				$heading = $translator->trans('maosal-webpush.notify.unsuspend.title');
+				$message = $translator->trans('maosal-webpush.notify.unsuspend.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.unsuspend.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.unsuspend.message', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.unsuspend.title');
+					$message_en = $translator->trans('maosal-webpush.notify.unsuspend.message', $attrs);
 				}
 				break;
 			case 'newDiscussionInTag':
@@ -240,12 +240,12 @@ class SendWebPushNotification
 				    '{title}' => $this->excerpt($subject->title)  
 				];
 				$link = $url->route('discussion', ['id' => $subject->discussion_id]);
-				$heading = $translator->trans('nikovonlas-webpush.notify.tag.discussion.title', $headingAttrs);
-				$message = $translator->trans('nikovonlas-webpush.notify.tag.discussion.message', $attrs);
+				$heading = $translator->trans('maosal-webpush.notify.tag.discussion.title', $headingAttrs);
+				$message = $translator->trans('maosal-webpush.notify.tag.discussion.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.tag.discussion.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.tag.discussion.message', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.tag.discussion.title');
+					$message_en = $translator->trans('maosal-webpush.notify.tag.discussion.message', $attrs);
 				}
 				break;
 			case 'newPostInTag':
@@ -257,12 +257,12 @@ class SendWebPushNotification
 					'{title}' => $this->excerpt($subject->title)
 				];
 				$link = $url->route('discussion', ['id' => $subject->discussion_id, 'near' => $subject->number]);
-				$heading = $translator->trans('nikovonlas-webpush.notify.tag.post.title', $headingAttrs);
-				$message = $translator->trans('nikovonlas-webpush.notify.tag.post.message', $attrs);
+				$heading = $translator->trans('maosal-webpush.notify.tag.post.title', $headingAttrs);
+				$message = $translator->trans('maosal-webpush.notify.tag.post.message', $attrs);
 				if ($locale != 'en') {
 					$translator->setLocale('en');
-					$heading_en = $translator->trans('nikovonlas-webpush.notify.tag.post.title');
-					$message_en = $translator->trans('nikovonlas-webpush.notify.tag.post.message', $attrs);
+					$heading_en = $translator->trans('maosal-webpush.notify.tag.post.title');
+					$message_en = $translator->trans('maosal-webpush.notify.tag.post.message', $attrs);
 				}
 				break;
 			default:
@@ -302,9 +302,9 @@ class SendWebPushNotification
 			}
 
             $config = new Config();
-            $config->setApplicationId($this->settings->get('nikovonlas-webpush.app_id'));
-            $config->setApplicationAuthKey($this->settings->get('nikovonlas-webpush.api_key'));
-            $config->setUserAuthKey($this->settings->get('nikovonlas-webpush.user_key'));
+            $config->setApplicationId($this->settings->get('maosal-webpush.app_id'));
+            $config->setApplicationAuthKey($this->settings->get('maosal-webpush.api_key'));
+            $config->setUserAuthKey($this->settings->get('maosal-webpush.user_key'));
 
             $guzzle = new GuzzleClient();
             $client = new HttpClient(new GuzzleAdapter($guzzle), new GuzzleMessageFactory());
@@ -317,7 +317,7 @@ class SendWebPushNotification
 	}
 
 	private function excerpt($str) {
-		$length = $this->settings->get('nikovonlas-webpush.excerpt_length');
+		$length = $this->settings->get('maosal-webpush.excerpt_length');
 		if (mb_strlen($str) > $length) {
 				$str = mb_substr(strip_tags($str), 0, $length);
 				$str .= '...';

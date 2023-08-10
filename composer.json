@@ -1,5 +1,5 @@
 {
-    "name": "nikovonlas/flarum-ext-web-push",
+    "name": "maosal/flarum-ext-web-push",
     "description": "Adds Web Push notification feature to flarum with OneSignal service",
     "type": "flarum-extension",
     "keywords": ["flarum", "push", "notification", "web", "onesignal"],
@@ -13,12 +13,12 @@
         "php-http/guzzle6-adapter": "^2.0.2"
     },
     "support": {
-        "source": "https://github.com/NikoVonLas/flarum-ext-web-push",
-        "issues": "https://github.com/NikoVonLas/flarum-ext-web-push/issues"
+        "source": "https://github.com/MaoSal/flarum-ext-web-push",
+        "issues": "https://github.com/MaoSal/flarum-ext-web-push/issues"
     },
     "autoload": {
         "psr-4": {
-            "NikoVonLas\\WebPush\\": "src/"
+            "MaoSal\\WebPush\\": "src/"
         }
     },
     "extra": {

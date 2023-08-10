@@ -1,8 +1,8 @@
 import SettingsModal from 'flarum/components/SettingsModal';
 import Switch from 'flarum/components/Switch';
 
-const settingsPrefix = 'nikovonlas-webpush.';
-const translationPrefix = 'nikovonlas-webpush.admin.settings.';
+const settingsPrefix = 'maosal-webpush.';
+const translationPrefix = 'maosal-webpush.admin.settings.';
 
 export default class WebPushSettingsModal extends SettingsModal {
     className() {
@@ -27,14 +27,14 @@ export default class WebPushSettingsModal extends SettingsModal {
             ]);
         };
         const inputSetting = (settingSuffix, labelSuffix, placeholder = false, help = false) => {
-          return m('.Form-group', [
-            m('label', app.translator.trans(translationPrefix + labelSuffix)),
-            m('input.FormControl', {
-              bidi: this.setting(settingsPrefix + settingSuffix),
-              placeholder: placeholder ? app.translator.trans(translationPrefix + labelSuffix + 'Placeholder') : '',
-            }),
-            help ? m('.helpText', app.translator.trans(translationPrefix + labelSuffix + 'Help')) : null,
-          ]);
+            return m('.Form-group', [
+                m('label', app.translator.trans(translationPrefix + labelSuffix)),
+                m('input.FormControl', {
+                    bidi: this.setting(settingsPrefix + settingSuffix),
+                    placeholder: placeholder ? app.translator.trans(translationPrefix + labelSuffix + 'Placeholder') : '',
+                }),
+                help ? m('.helpText', app.translator.trans(translationPrefix + labelSuffix + 'Help')) : null,
+            ]);
         }
         return [
             inputSetting('app_id', 'app_id'),

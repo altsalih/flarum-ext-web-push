@@ -1,6 +1,6 @@
 <?php
 
-namespace NikoVonLas\WebPush\Listener;
+namespace MaoSal\WebPush\Listener;
 
 use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Api\Event\Serializing;
@@ -19,7 +19,7 @@ class AddWebPushAttribute {
 	}
 
 	public function addAttributes(Serializing $event) {
-		$event->attributes['nikovonlas_webpush.app_id'] = $this->settings->get('nikovonlas-webpush.app_id');
-		$event->attributes['nikovonlas_webpush.subdomain'] = $this->settings->get('nikovonlas-webpush.subdomain');
+		$event->attributes['maosal_webpush.app_id'] = $this->settings->get('maosal-webpush.app_id');
+		$event->attributes['maosal_webpush.subdomain'] = $this->settings->get('maosal-webpush.subdomain');
 	}
 }
