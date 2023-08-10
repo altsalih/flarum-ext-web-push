@@ -13,8 +13,8 @@
         "php-http/guzzle6-adapter": "^2.0.2"
     },
     "support": {
-        "source": "https://github.com/MaoSal/flarum-ext-web-push",
-        "issues": "https://github.com/MaoSal/flarum-ext-web-push/issues"
+        "source": "https://github.com/altsalih/flarum-ext-web-push",
+        "issues": "https://github.com/altsalih/flarum-ext-web-push/issues"
     },
     "autoload": {
         "psr-4": {
@@ -31,5 +31,5 @@
             }
         }
     },
-    "minimum-stability": "beta"
+    "prefer-stable": true
 }
