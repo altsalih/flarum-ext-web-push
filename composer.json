@@ -31,5 +31,6 @@
             }
         }
     },
-    "prefer-stable": true
+    "prefer-stable": true,
+    "minimum-stability": "dev"
 }
