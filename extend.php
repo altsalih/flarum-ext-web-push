@@ -19,11 +19,11 @@ return [
             $document->head[] = '<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>';
         }),
 
-    function (Dispatcher $events) {
-			$events->subscribe(Listener\AddWebPushAttribute::class);
-			$events->subscribe(Listener\SendWebPushNotification::class);
-      $events->listen(ConfigureUserPreferences::class, function (ConfigureUserPreferences $event) {
-          $event->add('webPushNotifications', 'boolval', false);
-      });
-    },
+    // function (Dispatcher $events) {
+	// 		$events->subscribe(Listener\AddWebPushAttribute::class);
+	// 		$events->subscribe(Listener\SendWebPushNotification::class);
+    //   $events->listen(ConfigureUserPreferences::class, function (ConfigureUserPreferences $event) {
+    //       $event->add('webPushNotifications', 'boolval', false);
+    //   });
+    // },
 ];
